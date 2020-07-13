@@ -1,17 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
 
-import { HomePage } from '..';
+import PlayerHand from '..';
 
-const renderComponent = () =>
-  render(
-    <HelmetProvider>
-      <HomePage />
-    </HelmetProvider>,
-  );
+const renderComponent = () => render(<PlayerHand />);
 
-describe('<HomePage />', () => {
+describe('<PlayerHand />', () => {
   it('should match the snapshot', () => {
     const component = renderComponent();
     expect(component.container.firstChild).toMatchSnapshot();
